@@ -1,0 +1,12 @@
+{
+  "definitions": {
+    "number_0-65533hPa": {
+      "type": "number",
+      "size": 2,
+      "format": "uint16",
+      "unit": "hPa",
+      "minimum": 0,
+      "maximum": 65533
+    },
+  }
+}
