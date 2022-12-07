@@ -1,0 +1,38 @@
+{
+  "eoj": "0x002D",
+  "validRelease": {
+    "from": "F",
+    "to": "latest"
+  },
+  "className": {
+    "ja": "気圧センサ",
+    "en": "Air pressure sensor"
+  },
+  "shortName": "airpressureSensor",
+  "elProperties": [
+    {
+      "epc": "0xE0",
+      "validRelease": {
+        "from": "F",
+        "to": "latest"
+      },
+      "propertyName": {
+        "ja": "気圧計測値",
+        "en": "Air pressure measurement"
+      },
+      "shortName": "value",
+      "accessRule": {
+        "get": "required",
+        "set": "notApplicable",
+        "inf": "optional"
+      },
+      "descriptions": {
+        "ja": "気圧計測値を 0.1hPa で示す",
+        "en": "This property indicates air pressure measurements in units of 0.1hPa."
+      },
+      "data": {
+        "$ref": "#/definitions/number_0-65533hPa"
+      }
+    }
+  ]
+}
