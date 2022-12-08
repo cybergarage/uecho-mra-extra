@@ -10,6 +10,7 @@ This repository is intended to complement [MRA][mra], adding device objects that
 The repository updater expects the following commands to be installed in your environment.
 
 - wget
+- zip
 - unzip
 - jq
 
