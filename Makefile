@@ -17,10 +17,10 @@ SHELL := bash
 MRA_VER=MRA_en_V1.1.1
 
 MRA_ZIP=${MRA_VER}.zip
-MRA_URL=https://echonet.jp/wp/wp-content/uploads/pdf/General/Standard/MRA/${MRA_ZIP}}
+MRA_URL=https://echonet.jp/wp/wp-content/uploads/pdf/General/Standard/MRA/${MRA_ZIP}
 MRA_DIR=${MRA_en_V1}
 
-.PHONY: update ${MRA_ZIP}
+.PHONY: clean
 
 all: update
 
@@ -28,8 +28,6 @@ clean:
 	@rm ${MRA_ZIP}
 	@rm -rf ${MRA_DIR}
 
-${MRA_ZIP}:
-	@wget -q -O ${MRA_ZIP} ${MRA_URL}
-
-update: ${MRA_ZIP} clean
+update:
+	wget -q -O ${MRA_ZIP} ${MRA_URL}
 	unzip ${MRA_ZIP}
