@@ -5,6 +5,14 @@ The detailed requirements defines more than 100 device objects, but [MRA][mra] d
 
 This repository is intended to complement [MRA][mra], adding device objects that are not defined in [MRA][mra].
 
+# Usage
+
+The repository updater expects the following commands to be installed in your environment.
+
+- wget
+- unzip
+- jq
+
 # References
 
 [mra]:https://echonet.jp/spec_mra_rp1_en/
