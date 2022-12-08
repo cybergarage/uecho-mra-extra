@@ -7,6 +7,6 @@
       "unit": "hPa",
       "minimum": 0,
       "maximum": 65533
-    },
+    }
   }
 }
