@@ -18,16 +18,30 @@ MRA_VER=MRA_en_V1.1.1
 
 MRA_ZIP=${MRA_VER}.zip
 MRA_URL=https://echonet.jp/wp/wp-content/uploads/pdf/General/Standard/MRA/${MRA_ZIP}
-MRA_DIR=${MRA_en_V1}
+MRA_DIR=${MRA_VER}
+
+MRA_EXT_DIR=extra
+MRA_EXT_ZIP=${MRA_VER}-${MRA_EXT_DIR}.zip
+
+MRA_DEF_FILE=mraData/definitions/definitions.json
+MRA_DEV_DIR=mraData/devices
+MRA_DEF_MERGE_FILE=definitions-extra.json
 
 .PHONY: clean
 
 all: update
 
 clean:
-	@rm ${MRA_ZIP}
-	@rm -rf ${MRA_DIR}
+	-@rm ${MRA_ZIP}
+	-@rm ${MRA_EXT_ZIP}
+	-@rm -rf ${MRA_DIR}
 
-update:
+update: clean
 	wget -q -O ${MRA_ZIP} ${MRA_URL}
 	unzip ${MRA_ZIP}
+	rm  ${MRA_ZIP}
+	find ${MRA_EXT_DIR}/${MRA_DEV_DIR} -name "*.json" | xargs -Ifname -L 1 cp fname ${MRA_DIR}/mraData/devices
+	jq -s '.[0] * .[1]' ${MRA_DIR}/${MRA_DEF_FILE} ${MRA_EXT_DIR}/${MRA_DEF_FILE} > ${MRA_DEF_MERGE_FILE}
+	mv ${MRA_DEF_MERGE_FILE} ${MRA_DIR}/${MRA_DEF_FILE}
+	zip -r ${MRA_EXT_ZIP} ${MRA_DIR}
+	rm -rf ${MRA_DIR}
