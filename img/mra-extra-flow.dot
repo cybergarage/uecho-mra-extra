@@ -10,7 +10,7 @@ digraph G {
     
     "mra" [label="Machine Readable Appendix (MRA)\n(MRA_en_Vx.x.x.zip)"]
     "mardef" [label="MRA Extra Definitions\n(extra/*)"]
-    "mraup" [label="MRA Updater"]
+    "mraup" [label="MRA Extra Updater"]
     "mraex" [label="MRA Extra\n(MRA_en_Vx.x.x-extra.zip)"]
     
     "mra" -> "mraup"
