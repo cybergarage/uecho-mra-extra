@@ -18,3 +18,4 @@ all: mra-extra-flow.png
 
 mra-extra-flow.png: mra-extra-flow.dot
 	@-dot -Gdpi=300 -Tpng $< -o $@
+	@convert $@ -resize 400 $@
