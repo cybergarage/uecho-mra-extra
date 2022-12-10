@@ -17,5 +17,5 @@ SHELL := bash
 all: mra-extra-flow.png
 
 mra-extra-flow.png: mra-extra-flow.dot
-	@-dot -Gdpi=300 -Tpng $< -o $@
-	@convert $@ -resize 400 $@
+	@-dot -Gdpi=600 -Tpng $< -o $@
+	@convert $@ -resize 500 $@
