@@ -1,6 +1,6 @@
 digraph G {
     
-    graph [rankdir = LR];
+    graph [rankdir = TB];
 
     node [fontname="Helvetica,Arial,sans-serif"]
     edge [fontname="Helvetica,Arial,sans-serif"]
