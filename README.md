@@ -4,6 +4,7 @@
 
 This repository is intended to complement [MRA][mra] destributed by [ECHONET Consortium][eneto], adding extra device objects that are not defined in [MRA][mra].
 
+![](img/mra-extra-flow.png)
 
 ## Usage
 

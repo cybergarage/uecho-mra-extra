@@ -1,0 +1,19 @@
+digraph G {
+    
+    graph [rankdir = LR];
+
+    node [fontname="Helvetica,Arial,sans-serif"]
+    edge [fontname="Helvetica,Arial,sans-serif"]
+
+    node [shape=box]; mra; mardef; mraex;
+    node [shape=ellipse];  mraup;
+    
+    "mra" [label="Machine Readable Appendix (MRA)\n(MRA_en_Vx.x.x.zip)"]
+    "mardef" [label="MRA Extra Definitions\n(extra/*)"]
+    "mraup" [label="MRA Updater"]
+    "mraex" [label="MRA Extra\n(MRA_en_Vx.x.x-extra.zip)"]
+    
+    "mra" -> "mraup"
+    "mardef" -> "mraup"
+    "mraup" -> "mraex"
+}
