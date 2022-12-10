@@ -10,8 +10,6 @@ This [MRA][mra] extra updater is intended to complement [MRA][mra] distributed b
 
 The [MRA][mra] extra updater adds the following extra devices and definitions.
 
-The MRA extra updater 
-
 - devices
   - Air pressure sensor (0x002D)
 - definitions
