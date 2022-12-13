@@ -1,4 +1,4 @@
-# MRA Extra Updater
+# ECHONET MRA Extra Updater
 
 [Machine Readable Appendix (MRA)][mra] is a data file that describes the contents of [APPENDIX Detailed Requirements for ECHONET Device objects][app]. The detailed requirements define more than 100 device objects, but [MRA][mra] does not all coverd the defined device objects yet.
 
